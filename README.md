@@ -14,7 +14,7 @@ To install through Hex:
           [{:mime_types, "~> 0.1.0"}]
         end
 
-  2. Add any custom types you want to your `config/config.exs`
+  2. Add any custom types you want to your `config/config.exs`:
 
         config :mime, :types, %{
           "application/vnd.api+json" => ["json-api"]
