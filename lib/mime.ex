@@ -6,7 +6,7 @@ defmodule MIME do
   The MIME types registry can be extended
   in your application configuration as follows:
   
-      config :mime, :types, %{
+      config :mime_types, :custom, %{
         "application/vnd.api+json" => ["json-api"]
       }
       
@@ -23,7 +23,7 @@ defmodule MIME do
   
   @default_type "application/octet-stream"
   
-  use MIME.Types, Application.get_env(:mime, :types, %{})
+  use MIME.Types, Application.get_env(:mime_types, :custom, %{})
   
   @doc """
   Returns a list of MIME type + associated extensions two-tuples.

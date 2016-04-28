@@ -2,7 +2,7 @@ defmodule MIME.Types.Mixfile do
   use Mix.Project
 
   def project, do: [
-    app: :mime,
+    app: :mime_types,
     
     elixir: "~> 1.0",
     build_embedded:  Mix.env == :prod,
@@ -41,7 +41,7 @@ defmodule MIME.Types.Mixfile do
   defp package, do: [
     description: "A toolbelt for working with MIME types in Elixir.",
     maintainers: [
-      "dev@chriskeele.com",
+      "Chris Keele <dev@chriskeele.com>",
     ],
     licenses: [
       "MIT",
