@@ -26,7 +26,7 @@ defmodule MIME.Types do
       
       Module.register_attribute __MODULE__, :type_mapping, accumulate: true
       
-      # Read all the MIME type mappings into the `@mapping` variable.
+      # Read all the MIME type mappings into the `@type_mapping` variable.
       @mime_types_db |> File.stream!([], :line) |> Stream.map(fn line ->
         unless String.starts_with?(line, ["#", "\n"]) do
           [ type | exts ] = line |> String.strip |> String.split
@@ -36,7 +36,7 @@ defmodule MIME.Types do
       
       @custom_mapping unquote(custom_types)
       
-      # Merge custom mime types
+      # Merge `@custom_mapping` types into `@type_mapping` as `@mapping`
       @mapping @custom_mapping |> Enum.reduce(@type_mapping, fn {type, extensions}, mapping ->
         List.keystore(mapping, type, 0, { to_string(type), Enum.map(List.wrap(extensions), &to_string/1) })
       end ) |> List.keysort(0)
