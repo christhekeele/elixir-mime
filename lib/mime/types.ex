@@ -34,10 +34,8 @@ defmodule MIME.Types do
         end
       end ) |> Stream.run
       
-      @custom_mapping unquote(custom_types)
-      
-      # Merge `@custom_mapping` types into `@type_mapping` as `@mapping`
-      @mapping @custom_mapping |> Enum.reduce(@type_mapping, fn {type, extensions}, mapping ->
+      # Merge `custom_types` types into `@type_mapping` as `@mapping`
+      @mapping unquote(custom_types) |> Enum.reduce(@type_mapping, fn {type, extensions}, mapping ->
         List.keystore(mapping, type, 0, { to_string(type), Enum.map(List.wrap(extensions), &to_string/1) })
       end ) |> List.keysort(0)
       
