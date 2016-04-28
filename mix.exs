@@ -50,7 +50,6 @@ defmodule MIME.Types.Mixfile do
       Source: "https://github.com/christhekeele/mime_types",
       Homepage: "http://christhekeele.github.io/mime_types",
       Tests: "https://travis-ci.org/christhekeele/mime_types",
-      Docs: "https://hexdocs.pm/mime_types",
     }
   ]
   
