@@ -4,7 +4,7 @@ defmodule MIME.Types.Mixfile do
   def project, do: [
     app: :mime,
     
-    # elixir: "~> 1.2",
+    elixir: "~> 1.0",
     build_embedded:  Mix.env == :prod,
     start_permanent: Mix.env == :prod,
     deps: deps,
@@ -33,6 +33,7 @@ defmodule MIME.Types.Mixfile do
         Source: "https://github.com/christhekeele/mime_types",
         Homepage: "http://christhekeele.github.io/mime_types",
         Tests: "https://travis-ci.org/christhekeele/mime_types",
+        Docs: "https://hexdocs.pm/mime_types",
       }
     ],
     
