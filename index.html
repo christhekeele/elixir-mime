@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>MIME Types by christhekeele</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>MIME Types</h1>
+        <p>A toolbelt for working with MIME types in Elixir.</p>
+
+        <p class="view"><a href="https://github.com/christhekeele/mime_types">View the Project on GitHub <small>christhekeele/mime_types</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/christhekeele/mime_types/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/christhekeele/mime_types/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/christhekeele/mime_types">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="mimetypes" class="anchor" href="#mimetypes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIME.Types</h1>
+
+<blockquote>
+<p><strong>A toolbelt for working with MIME types in Elixir.</strong></p>
+</blockquote>
+
+<p>This was extracted from <a href="https://github.com/elixir-lang/plug">Plug</a> so that other projects can make use of it.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>To install through Hex:</p>
+
+<ol>
+<li>
+<p>Add <code>mime_types</code> to your list of dependencies in <code>mix.exs</code>:</p>
+
+<pre><code>def deps do
+  [{:mime_types, "~&gt; 0.1.0"}]
+end
+</code></pre>
+</li>
+<li>
+<p>Add any custom types you want to your <code>config/config.exs</code>:</p>
+
+<pre><code>config :mime_types, custom: %{
+  "application/vnd.api+json" =&gt; ["json-api"]
+}
+</code></pre>
+</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/christhekeele">christhekeele</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>

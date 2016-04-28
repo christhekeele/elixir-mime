@@ -1,0 +1,6 @@
+{
+  "name": "MIME Types",
+  "tagline": "A toolbelt for working with MIME types in Elixir.",
+  "body": "MIME.Types\r\n==========\r\n\r\n> **A toolbelt for working with MIME types in Elixir.**\r\n\r\nThis was extracted from [Plug](https://github.com/elixir-lang/plug) so that other projects can make use of it.\r\n\r\nInstallation\r\n------------\r\n\r\nTo install through Hex:\r\n\r\n  1. Add `mime_types` to your list of dependencies in `mix.exs`:\r\n\r\n        def deps do\r\n          [{:mime_types, \"~> 0.1.0\"}]\r\n        end\r\n\r\n  2. Add any custom types you want to your `config/config.exs`:\r\n\r\n        config :mime_types, custom: %{\r\n          \"application/vnd.api+json\" => [\"json-api\"]\r\n        }\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
