@@ -4,3 +4,11 @@ elixir:
   - 1.2.2
   - 1.1.1
   - 1.0.5
+  
+branches:
+  only:
+    - master
+    - development
+
+after_success:
+  - if [[ $TRAVIS_BRANCH == 'master' ]]; then mix hex.build && mix hex.publish && mix hex.docs; fi

@@ -14,28 +14,9 @@ defmodule MIME.Types.Mixfile do
     source_url: "https://github.com/christhekeele/mime_types",
     homepage_url: "http://christhekeele.github.io/mime_types",
     
-    docs: [
-      # logo: "path/to/logo.png",
-      extras: [
-        "README.md",
-        "LICENSE.md",
-      ],
-    ],
+    docs: docs,
     
-    package: [
-      maintainers: [
-        "dev@chriskeele.com",
-      ],
-      licences: [
-        "MIT",
-      ],
-      links: %{
-        Source: "https://github.com/christhekeele/mime_types",
-        Homepage: "http://christhekeele.github.io/mime_types",
-        Tests: "https://travis-ci.org/christhekeele/mime_types",
-        Docs: "https://hexdocs.pm/mime_types",
-      }
-    ],
+    package: package,
     
   ]
 
@@ -46,6 +27,31 @@ defmodule MIME.Types.Mixfile do
   defp deps, do: [
     earmark: [only: :dev],
     ex_doc:  [only: :dev],
+  ]
+  
+  defp docs, do: [
+    # logo: "path/to/logo.png",
+    extras: [
+      "README.md",
+      "LICENSE.md",
+      "CONTRIBUTORS.md",
+    ],
+  ]
+  
+  defp package, do: [
+    description: "A toolbelt for working with MIME types in Elixir.",
+    maintainers: [
+      "dev@chriskeele.com",
+    ],
+    licenses: [
+      "MIT",
+    ],
+    links: %{
+      Source: "https://github.com/christhekeele/mime_types",
+      Homepage: "http://christhekeele.github.io/mime_types",
+      Tests: "https://travis-ci.org/christhekeele/mime_types",
+      Docs: "https://hexdocs.pm/mime_types",
+    }
   ]
   
 end

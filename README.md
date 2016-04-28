@@ -1,7 +1,7 @@
 MIME.Types
 ==========
 
-> **A standardized Elixir toolbelt for working with MIME types.**
+> **A toolbelt for working with MIME types in Elixir.**
 
 Installation
 ------------
