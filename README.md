@@ -3,6 +3,8 @@ MIME.Types
 
 > **A toolbelt for working with MIME types in Elixir.**
 
+This was extracted from [Plug](https://github.com/elixir-lang/plug) so that other projects can make use of it.
+
 Installation
 ------------
 
