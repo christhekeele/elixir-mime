@@ -10,7 +10,7 @@ defmodule MIME do
         "application/vnd.api+json" => ["json-api"]
       }
       
-  After adding the configuration, MIME.Types needs to be recompiled.
+  After adding the configuration, the MIME module needs to be recompiled.
   If you are using mix, this can be accomplished with:
   
       $ mix deps.clean mime_types --build
