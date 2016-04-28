@@ -26,8 +26,9 @@ defmodule MIME do
   use MIME.Types, Application.get_env(:mime_types, :custom, %{})
   
   @doc """
-  Returns a list of MIME type + associated extensions two-tuples.
+  Returns a Keyword list of MIME types and their associated extensions.
   """
+  @spec mapping :: Keyword.t
   def mapping
 
   @doc """
@@ -46,6 +47,7 @@ defmodule MIME do
   @doc """
   Returns a list of all known extensions associated with MIME types.
   """
+  @spec extensions :: list(String.t)
   def extensions
   
   @doc """
@@ -66,6 +68,7 @@ defmodule MIME do
   @doc """
   Returns a list of all known MIME types.
   """
+  @spec types :: list(String.t)
   def types
   
   @doc """
