@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>MIME Types by christhekeele</title>
+    <meta name="description" content="MIME Types : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>MIME Types</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>MIME Types</h1>
-          <h2>A toolbelt for working with MIME types in Elixir.</h2>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/christhekeele/mime_types">View on GitHub</a>
+
+          <h1 id="project_title">MIME Types</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/christhekeele/mime_types/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/christhekeele/mime_types/tarball/master">Download this project as a tar.gz file</a>
+            </section>
         </header>
+    </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/christhekeele/mime_types/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/christhekeele/mime_types/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/christhekeele/mime_types" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a id="mimetypes" class="anchor" href="#mimetypes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIME.Types</h1>
 
 <blockquote>
@@ -43,31 +43,37 @@
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
 
+<blockquote>
+<p><a href="https://hex.pm/packages/mime_types"><img src="https://img.shields.io/hexpm/v/mime_types.svg?maxAge=86400&amp;style=flat-square" alt="Version"> <img src="https://img.shields.io/hexpm/dt/mime_types.svg?maxAge=86400&amp;style=flat-square" alt="Hex"> <img src="https://img.shields.io/badge/license-MIT-7D26CD.svg?maxAge=86400&amp;style=flat-square" alt="License"></a></p>
+</blockquote>
+
 <p>To install through Hex:</p>
 
 <ol>
 <li>
 <p>Add <code>mime_types</code> to your list of dependencies in <code>mix.exs</code>:</p>
 
-<pre><code>def deps do
-  [{:mime_types, "~&gt; 0.1.0"}]
-end
-</code></pre>
+<div class="highlight highlight-source-elixir"><pre><span class="pl-k">def</span> <span class="pl-en">deps</span> <span class="pl-k">do</span>
+  [{<span class="pl-c1">:mime</span>, <span class="pl-s"><span class="pl-pds">"</span>~&gt; 0.2.0<span class="pl-pds">"</span></span>}]
+<span class="pl-k">end</span></pre></div>
 </li>
 <li>
 <p>Add any custom types you want to your <code>config/config.exs</code>:</p>
 
-<pre><code>config :mime_types, custom: %{
-  "application/vnd.api+json" =&gt; ["json-api"]
-}
-</code></pre>
+<div class="highlight highlight-source-elixir"><pre>config <span class="pl-c1">:mime</span>, <span class="pl-c1">:types</span>, %{
+  <span class="pl-s"><span class="pl-pds">"</span>application/vnd.api+json<span class="pl-pds">"</span></span> <span class="pl-k">=&gt;</span> [<span class="pl-s"><span class="pl-pds">"</span>json-api<span class="pl-pds">"</span></span>]
+}</pre></div>
 </li>
 </ol>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>The <code>MIME</code> module has a very slim interface:</p>
+<blockquote>
+<p><strong><a href="https://hexdocs.pm/mime_types/api-reference.html">Full API Docs</a></strong></p>
+</blockquote>
+
+<p>The <code>MIME</code> module has a minimal surface area:</p>
 
 <ul>
 <li>
@@ -102,24 +108,43 @@ end
 </li>
 </ul>
 
-<h3>
-<a id="mimetypes-1" class="anchor" href="#mimetypes-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MIME.Types</h3>
-
-<p>Additionaly, you can <code>use MIME.Types</code> to <a href="https://hexdocs.pm/mime_types/MIME.Types.html">generate your own registry</a>. Tack on a Map or Keyword list to supply it with extra types.</p>
-
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
 
-<p>PRs welcome and appreciated <a href="https://github.com/christhekeele/mime_types/pulls">here</a>!</p>
-        </section>
+<blockquote>
+<p><strong>PRs welcome and appreciated <a href="https://github.com/christhekeele/mime_types/pulls">here</a>!</strong></p>
+</blockquote>
 
-        <footer>
-          MIME Types is maintained by <a href="https://github.com/christhekeele">christhekeele</a><br>
-          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<table>
+<thead>
+<tr>
+<th align="center"><img class="emoji" title=":thumbsup:" alt=":thumbsup:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20" align="absmiddle"></th>
+<th align="center"><a href="https://travis-ci.org/christhekeele/mime_types">Continuous Integration</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="https://github.com/christhekeele/mime_types/tree/master">Master</a></td>
+<td align="center"><img src="https://img.shields.io/travis/christhekeele/mime_types/master.svg?maxAge=86400&amp;style=flat-square" alt="Build Status"></td>
+</tr>
+<tr>
+<td align="center"><a href="https://github.com/christhekeele/mime_types/tree/development">Development</a></td>
+<td align="center"><img src="https://img.shields.io/travis/christhekeele/mime_types/development.svg?maxAge=86400&amp;style=flat-square" alt="Build Status"></td>
+</tr>
+</tbody>
+</table>
+      </section>
     </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">MIME Types maintained by <a href="https://github.com/christhekeele">christhekeele</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
