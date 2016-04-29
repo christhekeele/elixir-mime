@@ -9,7 +9,7 @@ defmodule MIME.Types.Mixfile do
     start_permanent: Mix.env == :prod,
     deps: deps,
     
-    version: "0.1.0",
+    version: "0.1.1",
     name: "MIME Types",
     source_url: "https://github.com/christhekeele/mime_types",
     homepage_url: "http://christhekeele.github.io/mime_types",
