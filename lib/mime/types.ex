@@ -40,7 +40,6 @@ defmodule MIME.Types do
         List.keystore(mapping, type, 0, { to_string(type), Enum.map(List.wrap(extensions), &to_string/1) })
       end ) |> List.keysort(0)
       
-      # @compile :inline_list_funcs #?
       def mapping,    do: @mapping
       def types,      do: @mapping |> Enum.map(&(elem(&1, 0)))
       def extensions, do: @mapping |> Enum.map(&(elem(&1, 1))) |> List.flatten |> Enum.uniq |> Enum.sort

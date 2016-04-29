@@ -5,25 +5,39 @@ MIME.Types
 
 This was extracted from [Plug](https://github.com/elixir-lang/plug) so that other projects can make use of it.
 
+
 Installation
 ------------
+>[![Version][hex-version-badge] ![Hex][hex-downloads-badge] ![License][hex-license-badge]][hex]
+
+[hex]:                 https://hex.pm/packages/mime_types
+[hex-version-badge]:   https://img.shields.io/hexpm/v/mime_types.svg?maxAge=86400&style=flat-square
+[hex-downloads-badge]: https://img.shields.io/hexpm/dt/mime_types.svg?maxAge=86400&style=flat-square
+[hex-license-badge]:   https://img.shields.io/badge/license-MIT-7D26CD.svg?maxAge=86400&style=flat-square
 
 To install through Hex:
 
-  1. Add `mime_types` to your list of dependencies in `mix.exs`:
+1. Add `mime_types` to your list of dependencies in `mix.exs`:
 
-        def deps do
-          [{:mime_types, "~> 0.1.0"}]
-        end
+  ```elixir
+  def deps do
+    [{:mime, "~> 0.2.0"}]
+  end
+  ```
 
-  2. Add any custom types you want to your `config/config.exs`:
+2. Add any custom types you want to your `config/config.exs`:
 
-        config :mime, :types, %{
-          "application/vnd.api+json" => ["json-api"]
-        }
+
+  ```elixir
+  config :mime, :types, %{
+    "application/vnd.api+json" => ["json-api"]
+  }
+  ```
 
 Usage
 -----
+
+> **[Full API Docs](https://hexdocs.pm/mime_types/api-reference.html)**
 
 The `MIME` module has a minimal surface area:
 
@@ -54,5 +68,18 @@ The `MIME` module has a minimal surface area:
 Contributing
 ------------
 
-PRs welcome and appreciated [here](https://github.com/christhekeele/mime_types/pulls)!
+> **PRs welcome and appreciated [here](https://github.com/christhekeele/mime_types/pulls)!**
+
+|         :thumbsup:         |  [Continuous Integration][travis-badge]   |
+|:--------------------------:|:-----------------------------------------:|
+|      [Master][master]      |   ![Build Status][master-travis-badge]    |
+| [Development][development] | ![Build Status][development-travis-badge] |
+
+[travis-badge]: https://travis-ci.org/christhekeele/mime_types
+
+[master]:              https://github.com/christhekeele/mime_types/tree/master
+[master-travis-badge]: https://img.shields.io/travis/christhekeele/mime_types/master.svg?maxAge=86400&style=flat-square
+
+[development]:              https://github.com/christhekeele/mime_types/tree/development
+[development-travis-badge]: https://img.shields.io/travis/christhekeele/mime_types/development.svg?maxAge=86400&style=flat-square
 
