@@ -6,7 +6,7 @@ defmodule MIME do
   The MIME types registry can be extended
   in your application configuration as follows:
   
-      config :mime_types, custom: %{
+      config :mime, :types, %{
         "application/vnd.api+json" => ["json-api"]
       }
       
