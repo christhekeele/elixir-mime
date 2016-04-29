@@ -1,6 +1,6 @@
 defmodule MIME.Types do
   
-  @moduledoc """
+  @nodoc """
   Builds a MIME type registry with common and custom types.
   
   To create your own MIME type registry:
@@ -11,8 +11,9 @@ defmodule MIME.Types do
         }
       end
   
-  This will build a registry of MIME types under `mapping/0`,
-  and lists `types/0` and `extensions/0` for checking inclusion.
+  This will build a registry of MIME types and expose it as `@mapping`
+  at compile time in your module, and utility functions `mapping/0`, 
+  `types/0` and `extensions/0` for checking inclusion at runtime.
   
   If you change the custom mapping passed into the macro,
   your module will need to be recompiled.

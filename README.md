@@ -50,10 +50,6 @@ The `MIME` module has a minimal surface area:
 - [mapping/0](https://hexdocs.pm/mime_types/MIME.html#mapping/0)
 
   Show the complete MIME type mapping.
-  
-### MIME.Types
-
-Additionaly, you can `use MIME.Types` to [generate your own registry](https://hexdocs.pm/mime_types/MIME.Types.html). Tack on a Map or Keyword list to supply it with extra types.
 
 Contributing
 ------------
