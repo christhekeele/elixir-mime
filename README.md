@@ -25,7 +25,7 @@ To install through Hex:
 Usage
 -----
 
-The `MIME` module has a very slim interface:
+The `MIME` module has a minimal surface area:
 
 - [valid?/1](https://hexdocs.pm/mime_types/MIME.html#valid?/1)
 
