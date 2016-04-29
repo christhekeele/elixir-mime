@@ -2,7 +2,7 @@ defmodule MIME.Types.Mixfile do
   use Mix.Project
 
   def project, do: [
-    app: :mime_types,
+    app: :mime,
     
     elixir: "~> 1.0",
     build_embedded:  Mix.env == :prod,

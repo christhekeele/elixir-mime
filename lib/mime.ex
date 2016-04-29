@@ -23,7 +23,7 @@ defmodule MIME do
   
   @default_type "application/octet-stream"
   
-  use MIME.Types, Application.get_env(:mime_types, :custom, %{})
+  use MIME.Types, Application.get_env(:mime, :types, %{})
   
   @doc """
   Returns a Keyword list of MIME types and their associated extensions.
