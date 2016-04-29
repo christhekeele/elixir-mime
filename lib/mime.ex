@@ -13,7 +13,7 @@ defmodule MIME do
   After adding the configuration, the MIME module needs to be recompiled.
   If you are using mix, this can be accomplished with:
   
-      $ mix deps.clean mime_types --build
+      $ mix deps.clean mime --build
       $ mix deps.get
       
   """

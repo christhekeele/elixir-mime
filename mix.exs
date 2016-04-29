@@ -1,4 +1,4 @@
-defmodule MIME.Types.Mixfile do
+defmodule MIME.Mixfile do
   use Mix.Project
 
   def project, do: [
@@ -10,9 +10,9 @@ defmodule MIME.Types.Mixfile do
     deps: deps,
     
     version: "0.1.1",
-    name: "MIME Types",
-    source_url: "https://github.com/christhekeele/mime_types",
-    homepage_url: "http://christhekeele.github.io/mime_types",
+    name: "MIME",
+    source_url: "https://github.com/christhekeele/elixir-mime",
+    homepage_url: "http://christhekeele.github.io/elixir-mime",
     
     docs: docs,
     
@@ -47,9 +47,9 @@ defmodule MIME.Types.Mixfile do
       "MIT",
     ],
     links: %{
-      Source: "https://github.com/christhekeele/mime_types",
-      Homepage: "http://christhekeele.github.io/mime_types",
-      Tests: "https://travis-ci.org/christhekeele/mime_types",
+      Source: "https://github.com/christhekeele/elixir-mime",
+      Homepage: "http://christhekeele.github.io/elixir-mime",
+      Tests: "https://travis-ci.org/christhekeele/elixir-mime",
     }
   ]
   
